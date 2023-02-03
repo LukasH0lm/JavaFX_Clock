@@ -12,7 +12,7 @@ public class DegreeConverter {
     }
 
     double convertHoursToDegrees(int hours){
-        return (360.0 / 12) * hours;
+        return (720.0 / 24) * hours;
 
     }
 
