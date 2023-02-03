@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
-public class HelloController {
+public class ClockController {
 
 
     getTime getTimeObject = new getTime();
