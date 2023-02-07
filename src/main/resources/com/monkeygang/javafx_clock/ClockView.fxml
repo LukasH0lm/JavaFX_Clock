@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0"
+      prefWidth="250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.monkeygang.javafx_clock.ClockController">
+   <Circle fill="#a5d4ff" layoutX="125.0" layoutY="125.0" radius="100.0" stroke="BLACK" strokeType="INSIDE"/>
+   <Line fx:id="secLine" endY="-80.0" layoutX="125.0" layoutY="125.0">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <rotationAxis>
+         <Point3D/>
+      </rotationAxis>
+   </Line>
+   <Line fx:id="minLine" endY="-50.0" layoutX="125.0" layoutY="125.0" stroke="#0400ff" strokeWidth="3.0">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <rotationAxis>
+         <Point3D/>
+      </rotationAxis>
+   </Line>
+   <Line fx:id="hourLine" endY="-25.0" layoutX="125.0" layoutY="125.0" stroke="RED" strokeWidth="5.0">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <rotationAxis>
+         <Point3D/>
+      </rotationAxis>
+   </Line>
+   <Circle fill="DODGERBLUE" layoutX="125.0" layoutY="125.0" radius="5.0" stroke="BLACK" strokeType="INSIDE"/>
+   <Label fx:id="am_pmLabel" layoutX="162.0" layoutY="117.0" text="AM"/>
+   <Label layoutX="122.0" layoutY="201.0" text="6"/>
+   <Label layoutX="45.0" layoutY="69.0" text="10"/>
+   <Label layoutX="168.0" layoutY="193.0" text="5"/>
+   <Label layoutX="81.0" layoutY="193.0" text="7"/>
+   <Label layoutX="48.0" layoutY="159.0" text="8"/>
+   <Label layoutX="199.0" layoutY="77.0" text="2"/>
+   <Label layoutX="171.0" layoutY="46.0" text="1"/>
+   <Label layoutX="118.0" layoutY="29.0" text="12"/>
+   <Label layoutX="195.0" layoutY="159.0" text="4"/>
+   <Label layoutX="34.0" layoutY="116.0" text="9"/>
+   <Label layoutX="205.0" layoutY="117.0" text="3"/>
+   <Label layoutX="78.0" layoutY="37.0" text="11"/>
+</Pane>
