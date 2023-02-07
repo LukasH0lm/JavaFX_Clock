@@ -3,9 +3,11 @@ package com.monkeygang.javafx_clock;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ClockApplication extends Application {
     @Override
@@ -14,6 +16,7 @@ public class ClockApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(ClockApplication.class.getResource("ClockView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Clock");
+        stage.getIcons().add(new Image(Objects.requireNonNull(ClockApplication.class.getResourceAsStream("/com/monkeygang/javafx_clock/clockIcon.png"))));
         stage.setScene(scene);
         stage.show();
     }
