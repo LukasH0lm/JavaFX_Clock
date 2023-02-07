@@ -2,18 +2,18 @@ package com.monkeygang.javafx_clock;
 
 public class DegreeConverter {
 
-    double convertSecondsToDegrees(int seconds){
-        return 360.0 / seconds;
+    double convertTimeToDegrees(int seconds){
+        return (360.0 / 60) * seconds;
     }
 
     double convertMinutesToDegrees(int minutes){
-        int seconds = minutes * 60;
-        return convertSecondsToDegrees(seconds);
+        return (360.0 / 60) * minutes;
+
     }
 
     double convertHoursToDegrees(int hours){
-        int minutes = hours * 60;
-        return convertMinutesToDegrees(minutes);
+        return (720.0 / 24) * hours;
+
     }
 
 }
