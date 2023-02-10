@@ -46,16 +46,19 @@ public class ClockController {
         hourLine.getTransforms().add(hourRotation);
 
 
-        timeline = new Timeline(new KeyFrame(Duration.seconds(0.25), e -> rotateLines()));
+
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1.0), e -> rotateLines()));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.playFromStart();
+
+
 
     }
 
     //main loop
     private void rotateLines() {
         now = LocalDateTime.now();
-        System.out.println("Time: " + now.getHour() + ":" + now.getMinute() + ":" + now.getSecond());
+
 
         if (now.getHour() > 12) {
             am_pmLabel.setText("PM");
@@ -76,14 +79,17 @@ public class ClockController {
     }
 
     public void rotateMinLine() {
-        minRotation.setAngle(now.getMinute() * 6);
+        minRotation.setAngle(now.getMinute() * 6.0);
         minLine.setRotate(minRotation.getAngle());
     }
 
 
     public void rotateHourLine() {
-        hourRotation.setAngle(now.getHour() * 30);
+        hourRotation.setAngle(now.getHour() * 30 + now.getMinute() * 0.5);
         hourLine.setRotate(hourRotation.getAngle());
+
+
+
     }
 
 
